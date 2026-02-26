@@ -28,6 +28,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D) -> void:
+	velocity.x = 5 * SPEED
 	velocity.y = JUMP_VELOCITY
 	if area.is_in_group("jump"):
+		velocity.y = JUMP_VELOCITY
 		print(area)
