@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://bqc3ohy41gaxm"]
+[gd_scene format=3 uid="uid://bo4opnevbgyhh"]
 
-[ext_resource type="Texture2D" uid="uid://1d7eexj3bkmg" path="res://icon.svg" id="1_f50pn"]
-[ext_resource type="Script" uid="uid://c20vvxbdtv7xw" path="res://character_body_2d.gd" id="1_ij6vw"]
+[ext_resource type="Script" uid="uid://c20vvxbdtv7xw" path="res://character_body_2d.gd" id="1_onrkg"]
+[ext_resource type="Texture2D" uid="uid://1d7eexj3bkmg" path="res://icon.svg" id="2_i3pqv"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ij6vw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_f50pn")
+"texture": ExtResource("2_i3pqv")
 }],
 "loop": true,
 "name": &"default",
@@ -15,16 +15,15 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ghijl"]
-size = Vector2(32, 26)
+size = Vector2(2, 2)
 
 [node name="Player" type="CharacterBody2D" unique_id=1104652574]
-script = ExtResource("1_ij6vw")
+script = ExtResource("1_onrkg")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=15084773]
-position = Vector2(2, -1)
-scale = Vector2(0.2734375, 0.2109375)
+position = Vector2(-5.9604645e-08, 0)
+scale = Vector2(0.015624999, 0.015624999)
 sprite_frames = SubResource("SpriteFrames_ij6vw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=210207707]
-position = Vector2(2, -1)
 shape = SubResource("RectangleShape2D_ghijl")
