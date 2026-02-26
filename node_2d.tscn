@@ -2,10 +2,36 @@
 
 [ext_resource type="Texture2D" uid="uid://b8myaahur1sjd" path="res://orobo.png" id="1_wtcfe"]
 
-[node name="Node2D" type="Node2D" unique_id=1611632191]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wtcfe"]
+size = Vector2(292, 446)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1078302013]
-position = Vector2(558, -34)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(117, 512.6367)
+
+[node name="Node2D" type="Node2D" unique_id=1611632191]
+position = Vector2(484, 692)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=782359963]
+scale = Vector2(7.533614, 0.73332304)
+disable_mode = 2
+freeze = true
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=1429471659]
 texture = ExtResource("1_wtcfe")
 
-[node name="RigidBody2D" type="RigidBody2D" parent="Sprite2D" unique_id=2924916]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=1180077218]
+position = Vector2(2, -6)
+shape = SubResource("RectangleShape2D_wtcfe")
+
+[node name="RigidBody2D2" type="RigidBody2D" parent="." unique_id=218864163]
+position = Vector2(-152, -667)
+disable_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D2" unique_id=1679357685]
+scale = Vector2(0.3999982, 0.2799996)
+texture = ExtResource("1_wtcfe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D2" unique_id=1485822273]
+position = Vector2(2.5, 2.5125923)
+scale = Vector2(1, 0.25549245)
+shape = SubResource("RectangleShape2D_0e48y")
