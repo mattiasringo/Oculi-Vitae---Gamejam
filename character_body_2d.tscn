@@ -15,14 +15,16 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ghijl"]
-size = Vector2(112, 102)
+size = Vector2(32, 26)
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1104652574]
 script = ExtResource("1_ij6vw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=15084773]
+position = Vector2(2, -1)
+scale = Vector2(0.2734375, 0.2109375)
 sprite_frames = SubResource("SpriteFrames_ij6vw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=210207707]
-position = Vector2(0, -1)
+position = Vector2(2, -1)
 shape = SubResource("RectangleShape2D_ghijl")
