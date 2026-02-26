@@ -239,8 +239,10 @@ tile_set = SubResource("TileSet_l08u0")
 format = 2
 layer_0/tile_data = PackedInt32Array(1507349, 262144, 7, 1507350, 262144, 7, 1507351, 262144, 7, 1507352, 262144, 7, 1507353, 262144, 7, 1507354, 262144, 7, 1507355, 262144, 7, 1507356, 262144, 7, 1507357, 262144, 7, 1507358, 262144, 7, 1507359, 262144, 7, 1507360, 262144, 7, 1507361, 262144, 7, 1507362, 262144, 7, 1507363, 262144, 7, 1507364, 262144, 7, 1507365, 262144, 7, 1507366, 262144, 7, 1507367, 262144, 7, 1507368, 262144, 7, 1507369, 262144, 7, 1507370, 262144, 7, 1507371, 262144, 7, 1507372, 262144, 7, 1507373, 262144, 7, 1507374, 262144, 7, 1507375, 262144, 7, 1507376, 262144, 7, 1507377, 262144, 7, 1507378, 262144, 7, 1507379, 262144, 7, 1507380, 262144, 7, 1507381, 262144, 7, 1507382, 262144, 7, 1507383, 262144, 7, 1507384, 262144, 7, 1507385, 262144, 7, 1507386, 262144, 7)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1791621634 groups=["jump"]]
+[node name="Area2D" type="Area2D" parent="." unique_id=1791621634]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=882452771]
-position = Vector2(186, 178.25)
+position = Vector2(273, 145)
 shape = SubResource("RectangleShape2D_nrb8d")
+
+[connection signal="area_entered" from="CharacterBody2D/Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]
