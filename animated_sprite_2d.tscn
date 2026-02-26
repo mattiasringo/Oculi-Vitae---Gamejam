@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cmm5xavdxlnxv"]
+
+[ext_resource type="Texture2D" uid="uid://b8myaahur1sjd" path="res://orobo.png" id="1_22xei"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qujof"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_22xei")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_348n5"]
+size = Vector2(159, 130)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=909865349]
+sprite_frames = SubResource("SpriteFrames_qujof")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1296528747]
+position = Vector2(1.5, 2)
+scale = Vector2(1.0031008, 1)
+shape = SubResource("RectangleShape2D_348n5")
