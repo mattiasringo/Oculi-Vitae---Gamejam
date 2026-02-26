@@ -23,3 +23,11 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+	
+	
+
+
+func _on_area_2d_area_entered(area: Area2D) -> void:
+	velocity.y = JUMP_VELOCITY
+	if area.is_in_group("jump"):
+		print(area)
