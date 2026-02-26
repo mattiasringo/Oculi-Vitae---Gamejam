@@ -218,6 +218,7 @@ sources/0 = SubResource("TileSetAtlasSource_0hol4")
 position = Vector2(-331, -665)
 
 [node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=94791302]
+zoom = Vector2(3.14, 3.14)
 
 [node name="TileMap" type="TileMap" parent="." unique_id=1506766288]
 tile_set = SubResource("TileSet_q6r6c")
