@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://bqc3ohy41gaxm" path="res://character_body_2d.tscn" id="1_0e48y"]
 [ext_resource type="Script" uid="uid://278jfqdw8rpy" path="res://touchpad.gd" id="2_0hol4"]
 [ext_resource type="Texture2D" uid="uid://bd5aab6e3ufl3" path="res://s4m_ur4i_8x8_minimal-future.png" id="2_epypp"]
+[ext_resource type="PackedScene" uid="uid://badoqoopqmq6w" path="res://jumppad.tscn" id="4_0hol4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_epypp"]
 size = Vector2(24, 20)
@@ -216,9 +217,6 @@ tile_size = Vector2i(8, 8)
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_epypp")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
-size = Vector2(35, 8.5)
-
 [node name="Node2D" type="Node2D" unique_id=1611632191]
 
 [node name="CharacterBody2D" parent="." unique_id=1104652574 instance=ExtResource("1_0e48y")]
@@ -239,11 +237,7 @@ tile_set = SubResource("TileSet_q6r6c")
 format = 2
 layer_0/tile_data = PackedInt32Array(1507349, 262144, 7, 1507350, 262144, 7, 1507351, 262144, 7, 1507352, 262144, 7, 1507353, 262144, 7, 1507354, 262144, 7, 1507355, 262144, 7, 1507356, 262144, 7, 1507357, 262144, 7, 1507358, 262144, 7, 1507359, 262144, 7, 1507360, 262144, 7, 1507361, 262144, 7, 1507362, 262144, 7, 1507363, 262144, 7, 1507364, 262144, 7, 1507365, 262144, 7, 1507366, 262144, 7, 1507367, 262144, 7, 1507368, 262144, 7, 1507369, 262144, 7, 1507370, 262144, 7, 1507371, 262144, 7, 1507372, 262144, 7, 1507373, 262144, 7, 1507374, 262144, 7, 1507375, 262144, 7, 1507376, 262144, 7, 1507377, 262144, 7, 1507378, 262144, 7, 1507379, 262144, 7, 1507380, 262144, 7, 1507381, 262144, 7, 1507382, 262144, 7, 1507383, 262144, 7, 1507384, 262144, 7, 1507385, 262144, 7, 1507386, 262144, 7)
 
-[node name="Area2D" type="Area2D" parent="." unique_id=923824720 groups=["jump"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1898788827]
-position = Vector2(186, 178.25)
-shape = SubResource("RectangleShape2D_0e48y")
+[node name="Area2D" parent="." unique_id=976190503 instance=ExtResource("4_0hol4")]
 
 [connection signal="area_entered" from="Area2D" to="CharacterBody2D" method="_on_area_2d_area_entered"]
 [connection signal="area_entered" from="Area2D" to="CharacterBody2D/Area2D" method="_on_area_2d_area_entered"]

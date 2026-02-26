@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://badoqoopqmq6w"]
+
+[ext_resource type="Texture2D" uid="uid://b8myaahur1sjd" path="res://orobo.png" id="1_laror"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0e48y"]
+size = Vector2(35, 8.5)
+
+[node name="Area2D" type="Area2D" unique_id=976190503 groups=["jump"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=437229509]
+position = Vector2(187, 180)
+shape = SubResource("RectangleShape2D_0e48y")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=473241374]
+position = Vector2(186.00002, 181)
+scale = Vector2(0.11102239, 0.02789474)
+texture = ExtResource("1_laror")
